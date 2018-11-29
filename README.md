@@ -31,7 +31,7 @@ $ export API_SECRET=********
 #### PowerShell
 ```
 $ $Env:API_TOKEN = "********"
-$ $ENV:API_SECRET = "********"
+$ $Env:API_SECRET = "********"
 ```
 
 ### Execution
