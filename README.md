@@ -41,3 +41,11 @@ Use below command and generate the links. The first argument denotes how many li
 ```
 $ node redirect-batch-superagent.js 100
 ```
+
+or
+
+```
+$ node redirect-batch-request.js 100
+```
+
+"redirects.csv" is generated after executing the scripts.
