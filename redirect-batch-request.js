@@ -1,7 +1,9 @@
 const request = require("request");
 var fs = require("fs");
+var args = process.argv.slice(2);
+var count = args[0];
 
-fs.writeFile("redirect.csv", "userReference, transactionReference, redirectUrl\n", function (err) {
+fs.writeFile("redirects.csv", "userReference, transactionReference, redirectUrl\n", function (err) {
     if (err) throw err;
 });
 
@@ -40,10 +42,11 @@ function initiate(userReference, save) {
     });
 }
 
-for (let ii = 0; ii < 5; ii++) {
+for (let ii = 0; ii < count; ii++) {
     initiate(ii, function(res) {
-        fs.appendFile("redirect.csv", res.userReference + ", " + res.transactionReference + ", " + res.redirectUrl + "\n", function(err) {
+        fs.appendFile("redirects.csv", res.userReference + ", " + res.transactionReference + ", " + res.redirectUrl + "\n", function(err) {
             if (err) throw err;
+            console.log("User " + res.userReference + " link generated.");
         });
     });
 }

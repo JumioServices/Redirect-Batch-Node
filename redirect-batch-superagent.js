@@ -1,9 +1,9 @@
 const request = require('superagent');
 var fs = require("fs");
-
 var promises = [];
 var results = {};
-var count = 100;
+var args = process.argv.slice(2);
+var count = args[0];
 
 const btoa = Buffer.from(process.env.API_TOKEN + ":" + process.env.API_SECRET).toString('base64');
 
@@ -37,12 +37,12 @@ async function loop() {
 async function start() {
     await loop();
 
-    fs.writeFile("redirect.csv", "userReference, transactionReference, redirectUrl\n", function (err) {
+    fs.writeFile("redirects.csv", "userReference, transactionReference, redirectUrl\n", function (err) {
         if (err) throw err;
         for (var ii = 0; ii < count; ii++) {
             var res = results[ii];
 
-            fs.appendFile("redirect.csv", res.userReference + ", " + res.transactionReference + ", " + res.redirectUrl + "\n", function(err) {
+            fs.appendFile("redirects.csv", res.userReference + ", " + res.transactionReference + ", " + res.redirectUrl + "\n", function(err) {
                 if (err) throw err;
             });
         }
