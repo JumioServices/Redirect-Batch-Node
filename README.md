@@ -6,7 +6,7 @@ Command-line Node.js scripts that can be used by prospect merchants to generate 
 
 ### Install Node.js
 
-The scripts is written in Node.js so please download the package [here](https://nodejs.org).
+Downloading the package [here](https://nodejs.org) and install.
 
 ### Install Frameworks
 
