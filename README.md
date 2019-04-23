@@ -10,7 +10,7 @@ Downloading the package [here](https://nodejs.org) and install.
 
 ### Install Frameworks
 
-After node is installed, use the terminal client such as Terminal (Mac) or PowerShell (Windows) to browse to this directory. Use npm to install the necessary framework.
+After node is installed, use the terminal client such as Terminal (Mac) or PowerShell (Windows) to browse to this directory. Use npm to install the necessary framework included within package.json.
 
 ```
 $ npm install
