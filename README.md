@@ -16,6 +16,17 @@ After node is installed, use the terminal client such as Terminal (Mac) or Power
 $ npm install
 ```
 
+## Configure the program
+
+The program defaults to US datacenter. Please change the URL to point to the designated datacenter.
+
+```
+HTTP Request Method: POST
+REST URL (US): https://netverify.com/api/v4/initiate
+REST URL (EU): https://lon.netverify.com/api/v4/initiate
+REST URL (SGP): https://core-sgp.jumio.com/api/v4/initiate
+```
+
 ## Running the program
 
 ### Set API token/secret in environment variables
